@@ -18,7 +18,7 @@ terraform {
     organization = "zm-intern06"
 
     workspaces {
-      name = "testIntegration"
+      name = "Terraform_test"
     }
   }
 }
