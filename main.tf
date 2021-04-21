@@ -2,9 +2,9 @@ provider "azurerm" {
   features {}
 
   subscription_id = "25a98a18-5e94-4b21-9d17-e8cf45bfd81f"
-  client_id       = "230858f3-b2bc-4f72-8851-5dcf5f44d789""
+  client_id       = "230858f3-b2bc-4f72-8851-5dcf5f44d789"
   client_secret   = "AJ_2C_.w2yKoWjCvoEWFKBSN4eCvADuIIy"
-  tenant_id       = "558506eb-9459-4ef3-b920-ad55c555e729""
+  tenant_id       = "558506eb-9459-4ef3-b920-ad55c555e729"
 }
 
 terraform {
@@ -12,6 +12,13 @@ terraform {
     azurerm = {
       source  = "hashicorp/azurerm"
       version = "2.56.0"
+    }
+  }
+   backend "remote" {
+    organization = "zm-intern06"
+
+    workspaces {
+      name = "testIntegration"
     }
   }
 }
