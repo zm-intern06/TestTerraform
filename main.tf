@@ -14,6 +14,13 @@ terraform {
       version = "2.56.0"
     }
   }
+   backend "remote" {
+    organization = "zm-intern06"
+
+    workspaces {
+      name = "TestTerraform"
+    }
+  }
 }
 
 resource "azurerm_resource_group" "rg" {
